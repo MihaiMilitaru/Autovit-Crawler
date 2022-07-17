@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Crawler</title>
+</head>
+<body>
+    <div class="container">
+        {% for item in lista %}
+        <div class="box">
+            <p>Model found: {{ item[0] }}</p>
+            <p>Car link: <a class="linkk" href="{{ item[1] }}" >view model</a>
+            
+        </div>    
+    {% endfor %}
+
+    </div>
+    <script>
+        let all_divs=document.querySelectorAll(".box")
+
+        for(let i=0;i<all_divs.length;i++){
+
+            let img1='model_'+i+'.png';
+            let imgg=document.createElement("img");
+            let link="static/QRCodes/" + img1;
+            console.log(link);
+            imgg.src=link;
+            imgg.alt='picture';
+            imgg.className='poza';
+            all_divs[i].appendChild(imgg);
+            
+
+        }
+    </script>
+    
+</body>
+</html>
