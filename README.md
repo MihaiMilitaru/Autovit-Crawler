@@ -4,3 +4,5 @@ In order to use it you have to follow the steps below:
 - run the crawler.py script to write the results in the output.txt file
 - run the generator.py script to save each result in a QR code for the link of the searched model
 - run app.py and view the results in a html page 
+
+The crawler is designed to search in the first 10 pages of the website.
